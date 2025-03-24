@@ -15,7 +15,7 @@ html {
 
 body {
     width: 90%;
-    margin: auto;
+    margin: 0 auto;
     margin-top: 0;
     text-align: center;
     border: 4px double var(--title);
