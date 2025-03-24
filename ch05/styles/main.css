@@ -2,3 +2,112 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+html {
+    background-color: var(--backround);
+}
+
+body {
+    width: 90%;
+    margin: auto;
+    margin-top: 0;
+    text-align: center;
+    border: 4px double var(--title);
+    background-color: var(--light);
+    
+}
+
+main { margin-left: 1.5em; }
+
+footer {border-top: 2px solid var(--title);}
+
+h1 { 
+    text-align: left;
+    font-size: 150%;
+    color: var(--title);
+    padding: 1em 0;
+}
+
+h2 { 
+    margin-top: .25em;
+    font-size: 125%; 
+    text-align: left;
+}
+
+h2:first-of-type {height: 90%;}
+
+h3 { 
+    padding-bottom: .5em;
+    font-size: 115%; 
+    text-align: left;
+}
+
+
+main h2 { 
+    text-align: left ;
+    padding: .5em 0;
+    max-height: 90%;
+}
+
+
+
+
+main ul {
+     padding-left: 1em;
+     padding-bottom: 1em;
+    }
+
+cite { 
+    color: var(--title);
+    font-style: normal;
+    font-weight: bold;
+    text-align: left;
+    
+}
+
+blockquote { 
+    text-align: left;
+    padding-right: 1.5em;
+ }
+
+main img {
+     float: left; 
+     padding-right: 1.5em;
+     padding-bottom: .25em;
+     box-sizing: border-box;
+}
+
+main p {
+    text-align: left;
+    padding-bottom: .5em;
+    padding-right: 1.5em;
+    width: auto;
+    box-sizing: border-box;
+}
+
+main ul:first-child {padding-top: .5em;}
+main ul:last-child {padding-bottom: 1em;}
+
+main li {
+    text-align: left;
+    padding-bottom: .5em;
+}
+
+footer p {
+    font-size: 90%;
+    font-weight: bold;
+    text-align: center;
+    margin: 1em;
+}
+
+:root {
+    --backround: aliceblue;
+    --light: white;
+    --title: rebeccapurple;
+ }
