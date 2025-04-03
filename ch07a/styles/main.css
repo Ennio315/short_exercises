@@ -101,3 +101,32 @@ footer {
 		padding-bottom: 0; 
 	}
 }
+
+nav { 
+	display: flex;
+	background-color: var(--primary-color);
+}
+
+li {
+	background-color: #931420;
+	
+	flex-basis: 25%;	
+	color: white;
+	font-weight: bold;
+}
+
+a { 
+	display: block;
+	color: white;
+	text-decoration: none;
+	padding: .5em 1em;
+}
+
+li:last-child{
+	color: var(--dark);
+	background-color: var(--accent-color);
+}
+
+a:hover, a:focus {
+	color: var(--accent-color);
+}
