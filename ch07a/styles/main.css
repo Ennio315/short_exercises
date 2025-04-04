@@ -125,6 +125,7 @@ a {
 li:last-child{
 	color: var(--dark);
 	background-color: var(--accent-color);
+	box-sizing: border-box;
 }
 
 a:hover, a:focus {
