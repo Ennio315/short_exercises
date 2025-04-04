@@ -105,6 +105,7 @@ footer {
 nav { 
 	display: flex;
 	background-color: var(--primary-color);
+	max-width: 189px;
 }
 
 li {
