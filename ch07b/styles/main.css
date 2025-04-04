@@ -111,3 +111,55 @@ footer {
 		padding-bottom: 0; 
 	}
 }
+
+nav ul {
+	background-color: var(--primary-color) ;
+	display: flex;
+	justify-content: space-evenly;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	
+	& li { 
+		width: max-content;
+/*	 	flex-basis: 20%; */
+		background-color: #931420;
+		margin: .25em;
+	}
+
+	& a {
+		display: block;
+		color: white;
+		text-decoration: none;
+		padding: .5em 1em;
+		margin: .25em;
+	}
+	
+}
+
+.accent {
+	color: var(--accent-color);
+} 
+
+
+.submenu { 
+	position: absolute;
+	left: 0;
+	display: none;
+	background-color: #931420;
+	color:white;
+}
+
+ul li:has(.submenu) {
+	box-sizing: content-box;
+	position: relative;
+	&:hover > .submenu {
+		display: block;
+	}
+}
+
+.submenu-link::after {
+	content: "\25bc";
+	font-size: small;
+	margin-left: .25em;
+}
