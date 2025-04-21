@@ -108,8 +108,10 @@ footer {
 
 /* the styles for the navigation menu */
 .navbar {
+	position: relative;
 	background-color: var(--primary-color);
 	& ul {
+		background-color: var(--primary-color);
 		list-style-type: none;
 		margin: 0;
 	}
@@ -129,13 +131,17 @@ footer {
 }
 
 .menu {
-	display: flex;
-	flex-wrap: wrap;
+	position: absolute;
+	left: 0;
+	display: none;
 	justify-content: space-evenly;
 }
 
 .menu li:has(.submenu) {
 	position: relative;
+	& small::after {
+		content: "\25b6" ;
+	} 
 	& small {
 		margin-left: .25em; /* add space for arrow */
 	}
@@ -146,11 +152,31 @@ footer {
 
 .submenu {
 	position: absolute;
-	left: 0;
+	top: 0;
+	left: 100%;
 	background-color: var(--primary-color);
 	color: var(--light);
 	width: 175%;
 	display: none;
+}
+
+#checkbox-toggle { display: none;}
+
+.menu-btn {
+	display: block;
+	padding: 0 .25em 1em;
+	color: var(--dark_menu);
+	font-size: 24px;
+}
+
+.menu-btn::after { content: "\2630"; }
+
+#checkbox-toggle:checked ~ .menu {
+	display: block;
+}
+
+#checkbox-toggle:checked ~ .menu-btn::after {
+	content: "\2716";
 }
 
 /* the media query for the page */
@@ -169,5 +195,68 @@ footer {
 		order: 1;
 		flex-basis: 25%;
 	}
+
+.menu {
+	position: relative;
+	display: flex;
+	justify-content: space-evenly;
 }
 
+.menu-btn {display: none;}
+
+.submenu {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: var(--primary-color);
+	color: var(--light);
+	width: 175%;
+	display: none;
+}
+
+.menu li:has(.submenu) small::after {
+	content: "\25bc" ;
+}
+
+}
+
+@media only screen and (min-width: 575px) {
+	header {
+		text-align: left;
+	}
+	main {
+		flex-direction: row;
+	}
+	section {
+		order: 2;
+		flex-basis: 75%;
+	}
+	aside {
+		order: 1;
+		flex-basis: 25%;
+	}
+
+.menu {
+	position: relative;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.menu-btn {display: none;}
+
+.submenu {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: var(--primary-color);
+	color: var(--light);
+	width: 175%;
+	display: none;
+}
+
+.menu li:has(.submenu) small::after {
+	content: "\25bc" ;
+}
+
+
+}
