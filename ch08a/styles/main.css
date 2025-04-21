@@ -44,8 +44,7 @@ header {
 		padding-bottom: 0;
 	}
 	& h3 {
-		font-size: 130%;
-		font-style: italic;
+		display: none;
 	}
 	& img {
 		float: left;
@@ -56,19 +55,12 @@ header {
 
 /* the styles for the main element */
 main {
+	flex-direction: column;
 	clear: left;
 	display: flex;
 }
 
-/* the styles for the section */
-section {
-	order: 2;
-	flex-basis: 75%;
-	& h1 {
-		color: var(--primary-color);
-		margin: 0;
-	}
-}
+
 
 /* the styles for the article */
 article {
@@ -80,17 +72,7 @@ article {
 	}
 }
 
-/* the styles for the aside */
-aside {
-	order: 1;
-	flex-basis: 25%;
-	& h2 {
-		color: var(--primary-color);
-	}
-	& img {
-		margin-bottom: .9em;
-	}
-}
+
 
 /* the styles for the footer */
 footer {
@@ -101,6 +83,30 @@ footer {
 		padding-bottom: 0; 
 	}
 }
+
+section {
+	
+	& h1 {
+		color: var(--primary-color);
+		margin: 0;
+	}
+}
+
+/* the styles for the aside */
+aside {
+	
+	& h2 {
+		color: var(--primary-color);
+	}
+	& img {
+		margin-bottom: .9em;
+	}
+}
+
+
+
+
+
 
 /* the styles for the navigation menu */
 nav {
@@ -128,3 +134,52 @@ nav {
 		font-style: normal; /* override default hover effect */
 	}
 }
+
+@media only screen and (min-width: 514px) {
+
+header {
+	h3 {
+		display: block;
+		font-size: 130%;
+		font-style: italic;
+	}
+}
+
+main {
+	flex-direction: row;
+}
+	
+	/* the styles for the section */
+section {
+	order: 2;
+	flex-basis: 75%;
+	& h1 {
+		color: var(--primary-color);
+		margin: 0;
+	}
+}
+
+/* the styles for the aside */
+aside {
+	order: 1;
+	flex-basis: 25%;
+	& h2 {
+		color: var(--primary-color);
+	}
+	& img {
+		margin-bottom: .9em;
+	}
+}
+
+}
+
+@media only screen and (min-width: 514px) {
+	header {
+		& h3 {
+			display: block;
+			font-size: 130%;
+			font-style: italic;
+		}
+	}
+}
+
