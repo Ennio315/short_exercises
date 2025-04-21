@@ -112,9 +112,24 @@ footer {
 	}
 }
 
+/* create container */
+
+main section {
+	container-type: inline-size;
+	container-name: speakers;
+}
+
+nav {
+	container-type: inline-size; 
+	container-name: navbar;
+}
+
+
 /* the styles for the navigation menu */
 .navbar {
+	position: relative;
 	background-color: var(--primary-color);
+	
 	& ul {
 		list-style-type: none;
 		margin: 0;
@@ -138,4 +153,57 @@ footer {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
+	display: none;
+}
+
+#checkbox-toggle {display: none;}
+.menu-btn {
+	display: block;
+	padding: 0 .25em 1em;
+	color: var(--dark_menu);
+	font-size: 24px;
+}
+
+.menu-btn::after { content: "\2630"; }
+
+#checkbox-toggle:checked ~ .menu {
+	display: block;
+}
+
+#checkbox-toggle:checked ~ .menu-btn::after {
+	content: "\2716";
+}
+
+
+/* Toggle for speaker menu */
+#checkbox-toggleS {display: none;}
+
+#checkbox-toggleS:checked ~ .menu {
+	display: block;
+}
+
+#checkbox-toggleS:checked ~ .menu-btn::after {
+	content: "\2716";
+}
+
+
+@container navbar (min-width: 560px) {
+	.menu {
+		display: flex;
+		position: relative;
+		justify-content: space-evenly;
+	}
+
+	.menu-btn { display: none; }
+}
+
+@container speakers (min-width: 590px) {
+	
+			.menu {
+				display: flex;
+				position: relative;
+				justify-content: space-evenly;
+			}
+
+	.menu-btn { display: none; } 
 }
