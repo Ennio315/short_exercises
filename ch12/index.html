@@ -11,6 +11,50 @@
 <h1>Please complete our survey</h1>
 <form action="confirmation.html" method="post">
     
+	<fieldset>
+		<legend>Contact Information</legend>
+			<div>
+			<label for="email"><u>E</u>mail:</label>	
+			<input type="email"	id="email" accesskey="E" tabindex="1" name="email" autofocus>
+			<label for="firstname"><u>F</u>irst Name: </label>
+			<input type="text" id="firstname" accesskey="F" tabindex="2" name="firstname" required>
+			<label for="lastname"><u>L</u>ast Name: </label>
+			<input type="text" id="lastname" accesskey="L" tabindex="3" name="lastname" required>
+			</div>
+	</fieldset>
+
+	<fieldset>
+		<legend>Geographic Information</legend>
+			<div>
+			<label for="state"><u>S</u>tate: </label>
+			<input type="text" placeholder="Two Characters" maxlength="2" id="state" 
+				accesskey="S" tabindex="4" name="state" required>
+			<label for="zipcode"><u>Z</u>ip Code:</label>
+			<input type="text"	placeholder="Five Digits" maxlength="5" id="zipcode"
+				accesskey="Z" tabindex="5" name="zipcode" pattern="\d{5}([\-]\d{4})?" required>
+			</div>
+	</fieldset>
+
+	<fieldset>
+		<legend>Source</legend>
+		<div>
+		<label for="hear">How did you hear about us?</label>
+		<select id="hear" name="hear">
+			<option value="websearch">Web Search</option>
+			<option value="afriend">A friend</option>
+			<option value="billboard">Billboard</option>
+			<option value="socialmedia">Social Media</option>
+		</select>
+
+		<label for="comments">Additional Comments:</label>
+		<textarea id="comments" placeholder="Add any additional comments here."></textarea>
+		</div>
+	</fieldset>
+
+	<div>
+	<button type="submit" class="button-style submit-button" >Submit</button>
+	<button type="reset" class="button-style reset-button">Reset</button>
+	</div>
 </form>
 </body>
 </html>
