@@ -101,3 +101,11 @@ footer {
 		padding-bottom: 0; 
 	}
 }
+
+video { 
+	float: left;
+	margin-right: .5em;
+	margin-bottom: .5em;
+	width: 90%;
+	height: auto;
+}
